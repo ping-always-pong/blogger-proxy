@@ -69,7 +69,7 @@ Blogger 博客反向代理加速服务 —— 将 Google 静态资源缓存到�
            ▼                                ▼
   ┌─────────────────┐            ┌──────────────────────┐
   │   本地磁盘缓存    │            │  Google Blogger 上游   │
-  │  static_cache/   │            │  ghs.googlehosted.com │
+  │  static_cache/   │            │  ghs.google.com │
   │                 │            │                      │
   │  a3f2b1c9.css  │            │  ┌────────────────┐   │
   │  d4e5f6a7.js   │            │  │ bp.blogspot.com│   │
@@ -91,7 +91,7 @@ Blogger 博客反向代理加速服务 —— 将 Google 静态资源缓存到�
     │  GET / (blog.example.com)    │                               │
     │─────────────────────────────►│                               │
     │                             │  域名白名单检查 ✓                │
-    │                             │  GET / (ghs.googlehosted.com)   │
+    │                             │  GET / (ghs.google.com)   │
     │                             │───────────────────────────────►│
     │                             │                               │
     │                             │      HTML (含原始资源URL)        │
@@ -230,7 +230,7 @@ server {
 | `cache_ttl` | duration | `1m` | 缓存有效期，超时自动删除 |
 | `max_cache_size` | size | `1GB` | 缓存容量上限，超出后淘汰旧文件 |
 | `proxy_domains` | []string | — | 允许代理的博客域名白名单 |
-| `target_address` | string | — | Blogger 上游地址，默认 `https://ghs.googlehosted.com` |
+| `target_address` | string | — | Blogger 上游地址，默认 `https://ghs.google.com` |
 | `cache_domains` | []string | — | 需要缓存加速的资源域名列表 |
 
 ### cache_ttl 格式

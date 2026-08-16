@@ -46,7 +46,7 @@ server:
   # ---- 上游目标地址 ----
   # Blogger 博客在 Google 的托管地址
   # 通常情况下无需修改此值
-  target_address: "https://ghs.googlehosted.com"
+  target_address: "http://ghs.google.com"
 
   # ---- 需要缓存加速的静态资源域名 ----
   # HTML 页面中指向这些域名的资源链接（CSS/JS/图片/字体等）
